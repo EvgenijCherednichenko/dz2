@@ -1,5 +1,7 @@
 from pathlib import Path
 
+from django.template.context_processors import media
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure--^r_d3isa95lbrdq6lgbh=wvbhz1waxn6gbn=#+hip*stup$!('
 DEBUG = True
@@ -78,3 +80,5 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATICFILES_DIRS = (BASE_DIR / 'static',)
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
