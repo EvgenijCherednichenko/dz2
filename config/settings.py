@@ -1,5 +1,7 @@
 from pathlib import Path
 
+from django.template.context_processors import media
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure--^r_d3isa95lbrdq6lgbh=wvbhz1waxn6gbn=#+hip*stup$!('
 DEBUG = True
@@ -12,7 +14,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'catalog',
+    'product'
 ]
 
 MIDDLEWARE = [
@@ -47,8 +49,12 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': "test",
+        'USER': 'postgres',
+        'PASSWORD': '270188',
+        'HOST': 'localhost',
+        'PORT': '5432'
     }
 }
 
@@ -74,3 +80,5 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATICFILES_DIRS = (BASE_DIR / 'static',)
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
