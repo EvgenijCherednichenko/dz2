@@ -23,8 +23,15 @@ class Product(models.Model):
         verbose_name="Фото",
         help_text="Загрузите фото подукта",
     )
-    category = models.CharField(
-        max_length=100, verbose_name="Категория", help_text="Введите категорию продукта"
+    category = models.ForeignKey(
+        "Category",
+        on_delete=models.SET_NULL,
+        blank=True,
+        null=True,
+        max_length=100,
+        verbose_name="Категория",
+        help_text="Введите категорию продукта",
+        related_name="products"
     )
     price = models.DecimalField(
         max_digits=10, decimal_places=2, verbose_name="Цена за покупку"
