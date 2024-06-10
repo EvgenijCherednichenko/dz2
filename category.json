@@ -1,0 +1,18 @@
+[
+  {
+    "model": "product.category",
+    "pk": 6,
+    "fields": {
+      "name": "Овощи",
+      "description": ""
+    }
+  },
+  {
+    "model": "product.category",
+    "pk": 7,
+    "fields": {
+      "name": "Фрукты",
+      "description": ""
+    }
+  }
+]
