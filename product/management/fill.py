@@ -9,7 +9,7 @@ class Command(BaseCommand):
 
     @staticmethod
     def json_read():
-        with open('db.json', encoding='UTF-8') as file:
+        with open('product.json', encoding='UTF-8') as file:
             return json.load(file)
 
     # Здесь мы получаем данные из фикстур с категориями и продуктами
