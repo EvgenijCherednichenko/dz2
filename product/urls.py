@@ -7,6 +7,5 @@ app_name = ProductConfig.name
 
 urlpatterns = [
     path('', index, name='product_sample'),
-    path('product/<int:pk>/', product_detail, name='product_detail')
-
-]
+    path('product/<int:pk>/', product_detail, name='product_detail'),
+    ]
